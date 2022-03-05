@@ -38,35 +38,22 @@ const initButtons = function () {
   }
 };
 
-// // example2 - without closures
+// // example2 - met een anonymous function als event handler
 // const initButtons = function () {
 //   for (let i = 1; i <= 3; i++) {
 //     document.getElementById('btn' + i).onclick = function () {
-//       alert(`You clicked button ${i}`);
+//       alert(`You clicked button ${i}.`);
 //     };
 //   }
 // };
 
-// // example3 - with use of this
+// // example3 - zonder closures met event.target
 // const initButtons = function () {
 //   for (let i = 1; i <= 3; i++) {
-//     document.getElementById('btn' + i).onclick = function () {
-//       alert(`You clicked button ${this.id}`);
+//     document.getElementById('btn' + i).onclick = function (event) {
+//       alert(`You clicked ${event.target.id}`);
 //     };
 //   }
 // };
 
 window.onload = initButtons;
-
-// // example try .. catch .. finally
-// try {
-// 	throw {
-// 		name: 'SomethingWentWrongError',
-// 		message: 'Something went wrong. You should fix it'
-// 	};
-// } catch (e) {
-// 	// handle the exception here
-// 	console.log(`Error ${e.name}: ${e.message}`);
-// } finally {
-// 	// this is executed even if an exception occurs
-// }
